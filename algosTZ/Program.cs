@@ -20,12 +20,12 @@ using (StreamReader f = new StreamReader("NewFile1.txt"))
 
         // c is first char in a line. target symbol
         c = split[0][0];
+
+        // min and max count of target char.    
         string range = split[1];
         range = range.Substring(0, range.Length - 1);
         var minMaxCount = range.Split(new Char[] { '-' });
-
-
-        // min and max count of target char.          
+        
         minCount = int.Parse(minMaxCount[0]);
         maxCount = int.Parse(minMaxCount[1]);
 
