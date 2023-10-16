@@ -33,7 +33,7 @@ using (StreamReader f = new StreamReader("NewFile1.txt"))
         input = split[2];
 
 
-        var result = CountLine(c, minCount, maxCount, input, ref counter);
+        CountLine(c, minCount, maxCount, input, ref counter);
     }
 }
 
