@@ -18,7 +18,6 @@ using (StreamReader f = new StreamReader("NewFile1.txt"))
         range = range.Substring(0, range.Length - 1);
         var minMaxCount = range.Split(new Char[] { '-' });
 
-
         bool minCountCheck = int.TryParse(minMaxCount[0], out int minCount);
         bool maxCountCheck = int.TryParse(minMaxCount[1], out int maxCount);
         if (!minCountCheck || !maxCountCheck) continue;
