@@ -45,6 +45,8 @@ public class CountServiceTests
     
     
     [InlineData('z', 2, 1, "asfalsezziruqwo", 0)] 
+
+    [InlineData('z', 10, 50, "asfalz", 0)] 
     public void CountLine_ShouldReturnExpectedResult(char c, int minCount, int maxCount, string input, int expected)
     {
         int counter = 0;

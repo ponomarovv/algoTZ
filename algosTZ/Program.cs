@@ -20,7 +20,9 @@ using (StreamReader f = new StreamReader("NewFile1.txt"))
 
         bool minCountCheck = int.TryParse(minMaxCount[0], out int minCount);
         bool maxCountCheck = int.TryParse(minMaxCount[1], out int maxCount);
-        if (!minCountCheck || !maxCountCheck) continue;
+
+        if (minCount < 0 || maxCount < 0 ||
+            !minCountCheck || !maxCountCheck) continue;
 
         // input string where we have to find target char 
         var input = split[2];
