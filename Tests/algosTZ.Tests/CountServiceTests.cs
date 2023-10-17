@@ -47,11 +47,12 @@ public class CountServiceTests
     [InlineData('z', 2, 1, "asfalsezziruqwo", 0)] 
 
     [InlineData('z', 10, 50, "asfalz", 0)] 
+    [InlineData('z', 10, 50, "zzzzzzzzzzzasfalz", 1)] 
     public void CountLine_ShouldReturnExpectedResult(char c, int minCount, int maxCount, string input, int expected)
     {
         int counter = 0;
-        int result = CountService.CountLine(c, minCount, maxCount, input, ref counter);
-        Assert.Equal(expected, result);
+        int actual = CountService.CountLine(c, minCount, maxCount, input, ref counter);
+        Assert.Equal(expected, actual);
     }
 }
 
