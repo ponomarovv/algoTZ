@@ -2,6 +2,9 @@
 
 public class CountService
 {
+
+ 
+
     public static int CountLine(char c, int minCount, int maxCount, string input, ref int counter)
     {
         int currentFoundChars = 0;
