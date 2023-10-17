@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "algosTZ", "algosTZ\algosTZ.csproj", "{61D2D409-A11D-4ED5-9365-76FEDA6F901C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "algosTZ.Tests", "Tests\algosTZ.Tests\algosTZ.Tests.csproj", "{0A9582B8-2B78-4C12-8A1B-486F69715C1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{61D2D409-A11D-4ED5-9365-76FEDA6F901C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61D2D409-A11D-4ED5-9365-76FEDA6F901C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61D2D409-A11D-4ED5-9365-76FEDA6F901C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A9582B8-2B78-4C12-8A1B-486F69715C1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A9582B8-2B78-4C12-8A1B-486F69715C1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A9582B8-2B78-4C12-8A1B-486F69715C1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A9582B8-2B78-4C12-8A1B-486F69715C1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
