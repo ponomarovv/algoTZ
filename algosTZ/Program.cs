@@ -19,10 +19,6 @@ void Do()
     {
         while ((s = f.ReadLine()) != null)
         {
-            bool flagBegin = false;
-            bool flagEnd = false;
-            int foundTimes = 0;
-
             string[] split = s.Split(new Char[] { ' ' });
 
             // c is first char in a line. target symbol
