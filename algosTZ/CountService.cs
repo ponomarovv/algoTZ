@@ -2,11 +2,10 @@
 
 public class CountService
 {
-
- 
-
     public static int CountLine(char c, int minCount, int maxCount, string input, ref int counter)
     {
+        if (minCount > maxCount) return counter;
+        
         int currentFoundChars = 0;
 
         var inputCharArray = input.ToCharArray();

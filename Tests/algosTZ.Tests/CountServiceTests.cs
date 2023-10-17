@@ -11,8 +11,30 @@ public class CountServiceTests
     [InlineData('a', 5, 7, "abcabcabc", 0)] // Should return 0 because 'a' appears 3 times.
     [InlineData('a', 2, 4, "aaaaaa", 0)] // Should return 1 because 'a' appears 6 times, but within the count range.
     [InlineData('a', 2, 4, "a", 0)] // Should return 1 because 'a' appears 1 time, but within the count range.
-    [InlineData('z', 2, 4, "asfalseiruqwozzzzz", 0)] // Should return 0 because 'a' appears 5 times.
+    [InlineData('z', 2, 4, "asfalseiruqwozzzzzz", 0)] 
     [InlineData('z', 2, 4, "asfalseiruqwoz", 0)] // Should return 0 because 'a' appears 1 time.
+    [InlineData('z', 2, 4, "azsfalseiruqwoz", 1)]
+    [InlineData('z', 2, 4, "zasfalseiruqwoz", 1)]
+    [InlineData('z', 2, 4, "asfalsezziruqwo", 1)]
+    
+    [InlineData('z', 2, 4, "zzzzasfalseiruqwo", 1)]
+    [InlineData('z', 2, 4, "asfalseiruqwozzzz", 1)]
+    [InlineData('z', 2, 4, "asfalseizzzzruqwo", 1)]
+    [InlineData('z', 2, 4, "asfalseizzszzruqwo", 1)]
+    
+    [InlineData('z', 2, 4, "zasfalseiruqwozzzz", 0)]
+    [InlineData('z', 2, 4, "asfalseiruqwozzzzz", 0)]
+    [InlineData('z', 2, 4, "asfalseirzzzzzuqwo", 0)]
+    
+    [InlineData('z', 0, 0, "asfalseiruqwo", 1)] 
+    [InlineData('z', 0, 0, "asfalseiruqwoz", 0)] 
+    [InlineData('z', 0, 0, "zasfalseiruqwo", 0)] 
+    [InlineData('z', 0, 0, "zasfalseiruqwoz", 0)] 
+    [InlineData('z', 0, 0, "zzasfalseziruqwozz", 0)] 
+    [InlineData('z', 0, 0, "asfalsezziruqwo", 0)]
+    
+    
+    [InlineData('z', 2, 1, "asfalsezziruqwo", 0)] 
     public void CountLine_ShouldReturnExpectedResult(char c, int minCount, int maxCount, string input, int expected)
     {
         int counter = 0;
